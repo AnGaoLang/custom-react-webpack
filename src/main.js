@@ -6,7 +6,7 @@ import print from './print.js';
 import { cube } from './module.js';
 
 print();
-console.log(123)
+console.log(PRODUCTION)
 function component() {
   var element = document.createElement('div');
 
