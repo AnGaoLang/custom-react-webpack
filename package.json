@@ -7,15 +7,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --env.NODE_ENV=dev --inline --config ./build/webpack.dev.js",
-    "build": "webpack --env.NODE_ENV=prod --config ./build/webpack.prod.js"
+    "start": "webpack-dev-server --env.NODE_ENV=dev --inline --config ./config/webpack.dev.js",
+    "build": "webpack --env.NODE_ENV=prod --config ./config/webpack.prod.js",
+    "demoBuild": "node ./build/build.js",
+    "demoStart": "node ./build/start.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.1.0",
     "css-loader": "^4.2.2",
@@ -33,5 +41,8 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.3"
-  }
+  },
+  "browserslist": [
+    "not ie <= 8"
+  ]
 }
